@@ -5,8 +5,9 @@
     <classes>
       <class name="magento.MyTestCases">
         <methods>
+          <include name="SignIn"/>
           <include name="MySetup"/>
-          <include name="SignUp"/>
+          <include name="Logout"/>
         </methods>
       </class> <!-- magento.MyTestCases -->
     </classes>
