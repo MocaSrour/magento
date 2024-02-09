@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-31T18:41:02 EET" name="Default suite" finished-at="2024-01-31T18:41:21 EET" duration-ms="18791">
+  <suite started-at="2024-02-09T23:37:11 EET" name="Default suite" finished-at="2024-02-09T23:37:29 EET" duration-ms="17917">
     <groups>
     </groups>
-    <test started-at="2024-01-31T18:41:02 EET" name="Default test" finished-at="2024-01-31T18:41:21 EET" duration-ms="18791">
+    <test started-at="2024-02-09T23:37:11 EET" name="Default test" finished-at="2024-02-09T23:37:29 EET" duration-ms="17917">
       <class name="magento.MyTestCases">
-        <test-method is-config="true" signature="MySetup()[pri:0, instance:magento.MyTestCases@5778826f]" started-at="2024-01-31T18:41:02 EET" name="MySetup" finished-at="2024-01-31T18:41:03 EET" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="MySetup()[pri:0, instance:magento.MyTestCases@51850751]" started-at="2024-02-09T23:37:11 EET" name="MySetup" finished-at="2024-02-09T23:37:11 EET" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MySetup -->
-        <test-method signature="SignUp()[pri:1, instance:magento.MyTestCases@5778826f]" started-at="2024-01-31T18:41:03 EET" name="SignUp" finished-at="2024-01-31T18:41:11 EET" duration-ms="8592" status="PASS">
+        <test-method signature="SignUp()[pri:1, instance:magento.MyTestCases@51850751]" started-at="2024-02-09T23:37:11 EET" name="SignUp" finished-at="2024-02-09T23:37:19 EET" duration-ms="8053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp -->
-        <test-method signature="AddOneRndItem()[pri:4, instance:magento.MyTestCases@5778826f]" started-at="2024-01-31T18:41:11 EET" name="AddOneRndItem" finished-at="2024-01-31T18:41:21 EET" duration-ms="10004" status="PASS">
+        <test-method signature="AddOneRndItem()[pri:4, instance:magento.MyTestCases@51850751]" started-at="2024-02-09T23:37:19 EET" name="AddOneRndItem" finished-at="2024-02-09T23:37:29 EET" duration-ms="9641" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddOneRndItem -->

@@ -73,25 +73,27 @@ public class MyTestCases extends Parameters {
 
 	@Test(priority = 4)
 	public void AddOneRndItem() throws InterruptedException {
-		driver.findElement(By.className("logo")).click();
-		List<WebElement> items = driver.findElement(By.cssSelector(".product-items.widget-product-grid"))
+		driver.get("https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html");
+		
+		List<WebElement> items = driver.findElement(By.cssSelector(".products.list.items.product-items"))
 				.findElements(By.tagName("li"));
-
-		System.out.println(items);
 
 		Random rndItem = new Random();
 		
-		items.get(rndItem.nextInt(4)).click();
+		WebElement theItem = items.get(rndItem.nextInt(4));
+		theItem.click();
 
-		WebElement itemSizes = driver.findElement(By.cssSelector(".swatch-attribute.size"));
+		WebElement itemSizes = driver.findElement(By.xpath("//div[@aria-labelledby='option-label-size-143']"));
 		int sizesNum = itemSizes.findElements(By.className("swatch-option")).size();
-		itemSizes.findElements(By.className("swatch-option")).get(rndItem.nextInt(sizesNum)).click();
+		WebElement size = itemSizes.findElements(By.className("swatch-option")).get(rndItem.nextInt(sizesNum));
+		size.click();
 		
 		Thread.sleep(2000);
 		
-		WebElement itemColors = driver.findElement(By.cssSelector(".swatch-attribute.color"));
+		WebElement itemColors = driver.findElement(By.xpath("//div[@aria-labelledby='option-label-color-93']"));
 		int colorsNum = itemColors.findElements(By.className("swatch-option")).size();
-		itemColors.findElements(By.className("swatch-option")).get(rndItem.nextInt(colorsNum)).click();
+		WebElement color = itemColors.findElements(By.className("swatch-option")).get(rndItem.nextInt(colorsNum));
+		color.click();
 		
 		Thread.sleep(2000);
 		
@@ -99,6 +101,10 @@ public class MyTestCases extends Parameters {
 		
 		Thread.sleep(2000);
 		
+		System.out.println("The item name: " + driver.findElement(By.xpath("//span[@data-ui-id='page-title-wrapper']")).getText());
+		System.out.println("The price: " + driver.findElement(By.className("product-info-main")).findElement(By.className("price-wrapper")).getText());
+		System.out.println("The color: " + color.getAttribute("option-label"));
+		System.out.println("The size: " + size.getText());
 		assertEquals(driver.findElement(By.cssSelector(".page.messages")).getText().contains("You added"), true);
 		
 	}
